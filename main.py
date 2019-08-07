@@ -11,7 +11,7 @@ def main():
     DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
     fp = logging.FileHandler('log.txt', encoding='utf-8')
     fs = logging.StreamHandler()
-    logging.basicConfig(level=logging.DEBUG, format=LOG_FORMAT,
+    logging.basicConfig(level=logging.INFO, format=LOG_FORMAT,
                         datefmt=DATE_FORMAT, handlers=[fp, fs])
 
     current_grade = get_grade()
