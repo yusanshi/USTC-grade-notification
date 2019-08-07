@@ -10,8 +10,6 @@ def send_mail(text):
     message['To'] = RECEIVER
     message['Subject'] = Header(text, 'utf-8')
 
-    a = 'Sender <%s>' % SENDER
-    print(a)
     smtpObj = smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT)
     smtpObj.login(SMTP_USERNAME, SMTP_PASSWORD)
     smtpObj.sendmail(SENDER,
