@@ -1,5 +1,5 @@
 import requests
-from config import *
+from config import STUDENT_ID, PASSWORD
 
 headers = {
     'Connection': 'keep-alive',

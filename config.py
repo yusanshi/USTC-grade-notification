@@ -12,3 +12,5 @@ PERIOD = 10  # 扫描间隔时间（分钟），推荐 10 ~ 60，十分不推荐
 # Educational Administration System Information
 STUDENT_ID = 'PB00000000'
 PASSWORD = '123456'
+
+MAX_TIME = 10

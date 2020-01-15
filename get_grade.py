@@ -1,7 +1,6 @@
-import requests
 import json
 from bs4 import BeautifulSoup
-from login import *
+from login import login, headers
 
 
 def get_grade(latest_only=False):
