@@ -1,4 +1,5 @@
-# Send Mail
+# Send mail
+# e.g. send from 00000000@163.com to 00000000@qq.com
 SMTP_HOST = 'smtp.163.com'
 SMTP_PORT = 465
 SMTP_USERNAME = '00000000@163.com'  # SMTP 用户名
@@ -9,8 +10,9 @@ RECEIVER = '00000000@qq.com'
 # Period
 PERIOD = 10  # 扫描间隔时间（分钟），推荐 10 ~ 60，十分不推荐设置过低
 
-# Educational Administration System Information
+# Educational administration system information
 STUDENT_ID = 'PB00000000'
 PASSWORD = '123456'
 
+# Retry MAX_TIME times on error
 MAX_TIME = 10

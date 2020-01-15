@@ -33,7 +33,7 @@ def main():
                     for key in increased:
                         text += " %s: %s " % (key, new_grade[key])
 
-                    logging.info("To send: " + text)
+                    logging.info(text)
                     send_mail(text)
         except Exception as e:
             text = "第 %d 次出现异常！ %s" % (i + 1, str(e))
