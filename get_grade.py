@@ -10,8 +10,8 @@ def get_grade(latest_only=False):
 
     grade_url_base = 'https://jw.ustc.edu.cn/for-std/grade/sheet/getGradeList?trainTypeId=1&semesterIds='
 
-    brow = login()
-    semester_ID = brow.get(semester_ID_url, headers=headers)
+    session = login()
+    semester_ID = session.get(semester_ID_url, headers=headers)
     semester_ID = BeautifulSoup(semester_ID.text, 'lxml')
     semester_ID = json.loads(semester_ID.p.string)
     semester_ID = sorted([unit['id'] for unit in semester_ID])
@@ -23,7 +23,7 @@ def get_grade(latest_only=False):
 
     grade_url = grade_url_base + semester_ID
 
-    grade_info = brow.get(grade_url, headers=headers)
+    grade_info = session.get(grade_url, headers=headers)
     grade_info = BeautifulSoup(grade_info.text, 'lxml')
     grade_info = json.loads(grade_info.p.string)
 
